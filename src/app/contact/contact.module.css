@@ -1,0 +1,218 @@
+.page {
+  padding-top: var(--navbar-height);
+}
+
+.contactSection {
+  background: var(--light-bg);
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* Profile Card */
+.profileCard {
+  padding: 36px 32px;
+  text-align: center;
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-full);
+  background: linear-gradient(135deg, var(--primary-green), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.profileCard h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.profileSubtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.profileBio {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.resumeBtn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Contact Actions */
+.contactActions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.actionCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+}
+
+.actionCard:hover {
+  transform: none;
+}
+
+.actionIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--border-radius-md);
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-green);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .actionIcon {
+  background: var(--dark-surface);
+}
+
+.actionInfo {
+  flex: 1;
+}
+
+.actionInfo h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.actionInfo p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.actionBtn {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+}
+
+.copied {
+  border-color: var(--primary-green) !important;
+  color: var(--primary-green) !important;
+}
+
+/* Social Section */
+.socialSection {
+  grid-column: 1 / -1;
+}
+
+.socialTitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  cursor: pointer;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-md);
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .socialIcon {
+  background: var(--dark-surface);
+}
+
+.socialCard:hover .socialIcon {
+  background: var(--primary-green);
+  color: white;
+}
+
+.socialName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.socialArrow {
+  color: var(--text-muted);
+  transition: all var(--transition-base);
+}
+
+.socialCard:hover .socialArrow {
+  color: var(--primary-green);
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profileCard {
+    grid-row: auto;
+  }
+
+  .socialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actionCard {
+    flex-wrap: wrap;
+  }
+
+  .actionBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

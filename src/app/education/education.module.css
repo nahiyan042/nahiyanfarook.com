@@ -1,0 +1,294 @@
+.page {
+  padding-top: var(--navbar-height);
+}
+
+/* Education Cards */
+.eduCards {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eduCard {
+  padding: 32px 36px;
+}
+
+.eduHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.eduLogoWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.eduLogo {
+  object-fit: contain;
+}
+
+.eduLogoPlaceholder {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--deep-brown);
+}
+
+.eduHeader h3 {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.eduBody {
+  padding-left: 80px;
+}
+
+.eduInstitution {
+  margin-bottom: 8px;
+}
+
+.eduInstitution a {
+  color: var(--bright-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 113, 188, 0.3);
+}
+
+.eduDetail {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.thesisBox {
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: var(--light-bg);
+  border-radius: var(--border-radius-md);
+  border-left: 4px solid var(--primary-green);
+}
+
+[data-theme="dark"] .thesisBox {
+  background: var(--dark-surface);
+}
+
+.thesisBox h4 {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary-green);
+}
+
+.thesisTitle {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.thesisMeta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.thesisLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  transition: all var(--transition-base);
+}
+
+.thesisLink:hover {
+  gap: 10px;
+}
+
+/* IELTS */
+.ieltsSection {
+  background: var(--light-bg-secondary);
+}
+
+[data-theme="dark"] .ieltsSection {
+  background: var(--dark-bg-secondary);
+}
+
+.ieltsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ieltsCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-lg);
+  transition: all var(--transition-base);
+}
+
+.ieltsCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.ieltsHighlight {
+  background: linear-gradient(135deg, var(--primary-green), var(--teal));
+  border-color: transparent;
+}
+
+.ieltsHighlight .ieltsScore {
+  color: #fff;
+}
+
+.ieltsHighlight .ieltsBand {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ieltsScore {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.ieltsBand {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Membership */
+.membershipSection {
+  background: var(--light-bg);
+}
+
+.membershipCard {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  text-align: center;
+}
+
+.membershipInfo h4 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.membershipMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.membershipDetail {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Certifications */
+.certSection {
+  background: var(--light-bg-secondary);
+}
+
+[data-theme="dark"] .certSection {
+  background: var(--dark-bg-secondary);
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.certCard {
+  padding: 24px 28px;
+  position: relative;
+}
+
+.certIcon {
+  margin-bottom: 12px;
+}
+
+.certName {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.certIssuer {
+  font-size: 0.85rem;
+  color: var(--bright-blue);
+  margin-bottom: 8px;
+}
+
+.certMeta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.certDate {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.certDuration {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--light-bg);
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+[data-theme="dark"] .certDuration {
+  background: var(--dark-surface);
+}
+
+@media (max-width: 768px) {
+  .eduBody {
+    padding-left: 0;
+  }
+
+  .ieltsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .certGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ieltsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

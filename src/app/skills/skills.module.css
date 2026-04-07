@@ -1,0 +1,178 @@
+.page {
+  padding-top: var(--navbar-height);
+}
+
+/* Skills Grid */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.skillCategory {
+  padding: 28px 32px;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+}
+
+.categoryTitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skillPercent {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.skillBar {
+  height: 6px;
+  background: var(--light-bg-secondary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .skillBar {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.skillFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Soft Skills */
+.softSkillsCard {
+  padding: 32px 36px;
+}
+
+.softSkillsTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.softSkillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.softSkillItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--light-bg);
+  border-radius: var(--border-radius-md);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .softSkillItem {
+  background: var(--dark-surface);
+}
+
+/* Lab Section */
+.labSection {
+  background: var(--light-bg-secondary);
+}
+
+[data-theme="dark"] .labSection {
+  background: var(--dark-bg-secondary);
+}
+
+.labCard {
+  padding: 36px 40px 36px 48px;
+}
+
+.labTitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  color: var(--bright-blue);
+}
+
+.labGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 10px;
+}
+
+.labItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.labDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .labGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .labCard {
+    padding: 24px 28px 24px 36px;
+  }
+
+  .softSkillsGrid {
+    grid-template-columns: 1fr;
+  }
+}

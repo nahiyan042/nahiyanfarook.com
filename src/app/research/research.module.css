@@ -1,0 +1,276 @@
+.page {
+  padding-top: var(--navbar-height);
+}
+
+/* Research Interests */
+.interests {
+  background: var(--light-bg);
+}
+
+.interestsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.interestCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px 24px;
+  cursor: default;
+}
+
+.interestCard:hover {
+  border-color: var(--primary-green);
+}
+
+.interestIcon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.interestName {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+/* Timeline */
+.experience {
+  background: var(--light-bg-secondary);
+}
+
+[data-theme="dark"] .experience {
+  background: var(--dark-bg-secondary);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-green), var(--teal), var(--bright-blue));
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -33px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary-green);
+  border: 3px solid var(--light-bg-secondary);
+  z-index: 1;
+}
+
+[data-theme="dark"] .timelineDot {
+  border-color: var(--dark-bg-secondary);
+}
+
+.timelineCard {
+  border-left: 4px solid var(--primary-green);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.timelineHeader h3 {
+  font-size: 1.2rem;
+  font-family: var(--font-body);
+}
+
+.timelineInstitution {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.timelineInstitution a {
+  color: var(--bright-blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 113, 188, 0.3);
+}
+
+.timelineInstitution a:hover {
+  text-decoration-color: var(--bright-blue);
+}
+
+.timelineSupervisor {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.respTitle {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.respList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.respList li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.respList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--primary-green);
+  border-radius: 50%;
+}
+
+/* Publications */
+.publications {
+  background: var(--light-bg);
+}
+
+.pubList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pubCard {
+  padding: 28px 32px;
+}
+
+.pubHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.pubNumber {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.pubTitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.pubAuthors {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.pubJournal {
+  font-size: 0.9rem;
+  color: var(--bright-blue);
+  margin-bottom: 12px;
+}
+
+.pubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  transition: all var(--transition-base);
+}
+
+.pubLink:hover {
+  color: var(--primary-green-dark);
+  gap: 10px;
+}
+
+/* Publication Stats */
+.pubStats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--card-border);
+}
+
+.pubStatItem {
+  text-align: center;
+}
+
+.pubStatValue {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  line-height: 1;
+}
+
+.pubStatLabel {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .interestsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline {
+    padding-left: 32px;
+  }
+
+  .timelineDot {
+    left: -25px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timelineHeader {
+    flex-direction: column;
+  }
+
+  .pubStats {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+}
